@@ -14,7 +14,7 @@ ENV UNREAL_PATH=/home/ue4/UnrealEngine
 ENV UE4_ROOT $UNREAL_PATH
 
 ARG VISUALROAD_VERSION=master
-ARG VISUALROAD_REPOSITORY=https://github.com/uwdb/visualroad.git
+ARG VISUALROAD_REPOSITORY=https://github.com/tiantuxu/visualroad.git
 ENV VISUALROAD_PATH=/home/ue4/visualroad
 
 ENV DEBIAN_FRONTEND noninteractive
@@ -91,3 +91,9 @@ RUN git clone $VISUALROAD_REPOSITORY $VISUALROAD_PATH && \
     git checkout $VISUALROAD_VERSION
 
 WORKDIR /app
+
+USER root
+RUN mkdir /app/my-dataset
+
+RUN chown -R ue4 /app
+USER ue4
