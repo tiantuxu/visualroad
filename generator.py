@@ -317,8 +317,8 @@ def write_configuration(path, tiles, scale, resolution, duration, panorama_fov, 
 
     filename = os.path.join(path, CONFIGURATION_FILENAME)
 
-    #if not os.path.exists(path):
-    #    os.makedirs(path)
+    if not os.path.exists(path):
+        os.makedirs(path)
     if os.path.exists(filename):
         os.replace(filename, filename + '.bak')
 
