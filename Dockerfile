@@ -95,5 +95,5 @@ WORKDIR /app
 USER root
 RUN mkdir /app/my-dataset
 
-RUN chown -R ue4 /app
-USER ue4
+RUN chown -R ue4:ue4 /app
+# USER ue4
