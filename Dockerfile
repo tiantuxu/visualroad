@@ -6,19 +6,19 @@ ENV OUTPUT_PATH=/app
 ARG CARLA_VERSION=0.9.6
 ARG CARLA_REPOSITORY=https://github.com/carla-simulator/carla
 
-# ENV CARLA_PATH=/home/ue4/carla
-ENV CARLA_PATH=/root/carla
+ENV CARLA_PATH=/home/ue4/carla
+# ENV CARLA_PATH=/root/carla
 ENV CARLA_EXECUTABLE=$CARLA_PATH/Unreal/CarlaUE4/Saved/StagedBuilds/LinuxNoEditor/CarlaUE4/Binaries/Linux/CarlaUE4-Linux-Shipping
 
 ENV UNREAL_VERSION=4.22
-# ENV UNREAL_PATH=/home/ue4/UnrealEngine
-ENV UNREAL_PATH=/root/UnrealEngine
+ENV UNREAL_PATH=/home/ue4/UnrealEngine
+# ENV UNREAL_PATH=/root/UnrealEngine
 ENV UE4_ROOT $UNREAL_PATH
 
 ARG VISUALROAD_VERSION=master
 ARG VISUALROAD_REPOSITORY=https://github.com/tiantuxu/visualroad.git
-# ENV VISUALROAD_PATH=/home/ue4/visualroad
-ENV VISUALROAD_PATH=/root/visualroad
+ENV VISUALROAD_PATH=/home/ue4/visualroad
+#ENV VISUALROAD_PATH=/root/visualroad
 
 ENV DEBIAN_FRONTEND noninteractive
 
