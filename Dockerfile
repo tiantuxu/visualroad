@@ -71,7 +71,7 @@ RUN apt-get install -y clang-7 lld-7 && \
 
 ##############
 
-USER ue4
+# USER ue4
 
 # Ensure yaml, opencv
 RUN pip2 install --user pyyaml opencv-python==4.0.1.24 psutil & \
@@ -95,8 +95,8 @@ RUN git clone $VISUALROAD_REPOSITORY $VISUALROAD_PATH && \
 
 WORKDIR /app
 
-USER root
+# USER root
 RUN mkdir /app/my-dataset
 
 RUN chown -R root:ue4 /app
-USER ue4
+# USER ue4
