@@ -17,8 +17,8 @@ ENV UE4_ROOT $UNREAL_PATH
 
 ARG VISUALROAD_VERSION=master
 ARG VISUALROAD_REPOSITORY=https://github.com/tiantuxu/visualroad.git
-# ENV VISUALROAD_PATH=/home/ue4/visualroad
-ENV VISUALROAD_PATH=/root/visualroad
+ENV VISUALROAD_PATH=/home/ue4/visualroad
+# ENV VISUALROAD_PATH=/root/visualroad
 
 ENV DEBIAN_FRONTEND noninteractive
 
