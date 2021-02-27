@@ -99,4 +99,4 @@ USER root
 RUN mkdir /app/my-dataset
 
 RUN chown -R root:ue4 /app
-# USER ue4
+USER ue4
