@@ -316,11 +316,11 @@ def write_configuration(path, tiles, scale, resolution, duration, panorama_fov, 
     }
 
     filename = os.path.join(path, CONFIGURATION_FILENAME)
-
-    if not os.path.exists(path):
-        os.makedirs(path)
-    if os.path.exists(filename):
-        os.replace(filename, filename + '.bak')
+    
+    # if not os.path.exists(path):
+    #     os.makedirs(path)
+    # if os.path.exists(filename):
+    #     os.replace(filename, filename + '.bak')
 
     with open(filename, 'w') as file:
         yaml.dump(configuration, file)
