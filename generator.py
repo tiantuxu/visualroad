@@ -317,10 +317,10 @@ def write_configuration(path, tiles, scale, resolution, duration, panorama_fov, 
 
     filename = os.path.join(path, CONFIGURATION_FILENAME)
     
-    # if not os.path.exists(path):
-    #     os.makedirs(path)
-    # if os.path.exists(filename):
-    #     os.replace(filename, filename + '.bak')
+    if not os.path.exists(path):
+        os.makedirs(path)
+    if os.path.exists(filename):
+        os.replace(filename, filename + '.bak')
 
     with open(filename, 'w') as file:
         yaml.dump(configuration, file)
@@ -419,7 +419,8 @@ if __name__ == '__main__':
         help='Dataset output path')
     args = parser.parse_args()
 
-    if not os.path.isabs(args.path):
-        args.path = os.path.join(os.environ['OUTPUT_PATH'], args.path)
+    # if not os.path.isabs(args.path):
+    #     args.path = os.path.join(os.environ['OUTPUT_PATH'], args.path)
+    args.path = os.environ['OUTPUT_PATH']
 
     generate(args.path, tile_pool, args.scale, (args.width, args.height), args.duration, args.fov, args.seed, args.vehicles, args.pedestrians)
