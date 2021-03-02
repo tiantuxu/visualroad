@@ -322,8 +322,8 @@ def write_configuration(path, tiles, scale, resolution, duration, panorama_fov, 
     if os.path.exists(filename):
         os.replace(filename, filename + '.bak')
 
-    with open(filename, 'w') as file:
-        yaml.dump(configuration, file)
+    # with open(filename, 'w') as file:
+    #     yaml.dump(configuration, file)
 
 
 def generate(path, tiles, scale, resolution, duration, panorama_fov, seed=None, vehicles=None, walkers=None, hostname='localhost', port=2000, timeout=150):
