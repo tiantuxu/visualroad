@@ -99,7 +99,7 @@ def create_listener(configuration, type, id):
             data = image.raw_data
             image = np.asarray(data, np.uint8).reshape(configuration.resolution[1], configuration.resolution[0], 4)[:,:,:3]
             writer[0].write(image)
-	    cv2.imwrite(str(count[0]) + ".jpg", img) 
+	    cv2.imwrite(str(count[0]) + ".jpg", img)
         count[0] += 1
 
     listener.close = close
