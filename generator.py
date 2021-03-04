@@ -91,8 +91,8 @@ def create_listener(configuration, type, id):
         writer.clear()
 
     def listener(image):
-	logging.info("teddyxu: writing image")
-	logging.info(count[0])
+        logging.info("teddyxu: writing image")
+        logging.info(count[0])
         if 0 <= count[0] <= FPS * configuration.duration:
             if 'semantic' in type:
                 image.convert(carla.ColorConverter.CityScapesPalette)
